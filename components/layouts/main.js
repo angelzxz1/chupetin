@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import NavBar from "../navBar";
+import NavBar from "../navBar";
 import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 const Main = (props) => {
   const { children, router, tittle } = props;
@@ -11,7 +11,7 @@ const Main = (props) => {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <title>{tittle}</title>
       </Head>
-      {/* <NavBar path={router.asPath} /> */}
+      <NavBar path={router.asPath} />
       <Container maxW="container.md" pt={14}>
         {children}
       </Container>

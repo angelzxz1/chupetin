@@ -8,14 +8,6 @@ const theme = extendTheme({
   },
   fonts: {},
   colors: {},
-  styles: {
-    global: {
-      body: {
-        bg: "gray.900",
-        color: "white",
-      },
-    },
-  },
+  styles: {},
 });
-console.log(theme);
 export default theme;
