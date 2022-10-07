@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 
 const HowToPlay = () => {
   return (
@@ -6,7 +6,10 @@ const HowToPlay = () => {
       <Flex
         mt={4}
         as="h1"
-        bgGradient="linear(to-br, purple.400, green.500)"
+        bgGradient={useColorModeValue(
+          "linear(to-tr, orange.400, green.500)",
+          "linear(to-br, purple.400, green.500)"
+        )}
         w="100%"
         h="200px"
         borderRadius="full"
@@ -28,7 +31,10 @@ const HowToPlay = () => {
           right: 0,
           bottom: 0,
           left: 0,
-          bgGradient: "linear(to-tr, red.400, green.500)",
+          bgGradient: useColorModeValue(
+            "linear(to-br, purple.400, green.500)",
+            "linear(to-tr, orange.400, green.500)"
+          ),
           // zIndex: -1,
           transition: "opacity 0.2s linear",
           opacity: 0,
