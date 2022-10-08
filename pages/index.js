@@ -47,7 +47,7 @@ const QuestionModal = ({ showModal, setShowModal }) => {
 
 const Main = () => {
   const [fullH, setFullH] = useState("calc(100vh - 3.5rem)");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   return (
     <Flex fontFamily="roboto" direction="column">
       <Flex
