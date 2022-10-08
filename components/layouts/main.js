@@ -4,7 +4,7 @@ import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 const Main = (props) => {
   const { children, router, tittle } = props;
   return (
-    <Box as="main" pb={8}>
+    <Box as="main">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
