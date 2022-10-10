@@ -6,16 +6,15 @@ const theme = extendTheme({
   config: {
     initialColorMode: "dark",
     useSystemColorMode: false,
-    disableTransitionOnChange: false
+    disableTransitionOnChange: false,
   },
   fonts: {},
   colors: {},
   styles: {
     global: {
-      fontFamily: "'M PLUS Rounded 1c', sans-serif"
-    }
+      fontFamily: "'M PLUS Rounded 1c', sans-serif",
+    },
   },
-  sizes: sizes
+  sizes: sizes,
 });
-console.log(theme);
 export default theme;
