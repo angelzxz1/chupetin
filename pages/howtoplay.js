@@ -82,4 +82,6 @@ const HowToPlay = () => {
   );
 };
 
+HowToPlay.tittle = "How to play";
+
 export default HowToPlay;
