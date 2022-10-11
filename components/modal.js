@@ -24,15 +24,19 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
 
   const setInfo = () => {
     const info = randomProperty(game.core);
-    const pnlt = game.penaltie.list;
-
-    console.log(pnlt);
-    const cont = {
-      Title: info.toString(),
-      Body: "info.",
-      Penaltie: pnlt[Math.floor(Math.random() * pnlt.length)],
-    };
-    setContent(cont);
+    if (info.toString() !== "Rule") {
+      setContent({
+        Title: info.toString(),
+        Body: info.random(),
+        Penaltie: game.penaltie.randomPenaltieGeneral(),
+      });
+    } else {
+      setContent({
+        Title: info.toString(),
+        Body: info.random(),
+        Penaltie: game.penaltie.randomPenaltieRules(),
+      });
+    }
   };
 
   useEffect(() => {
@@ -82,7 +86,10 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
             }}
           />
         </Grid>
-        <Grid gridArea="boddy"></Grid>
+        <Grid gridArea="boddy">
+          <Grid>{content.Body}</Grid>
+          <Grid>{content.Penaltie}</Grid>
+        </Grid>
         <Grid>
           <Button
             onClick={() => {
