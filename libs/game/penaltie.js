@@ -28,13 +28,11 @@ const penalties = {
 };
 export default {
   penalties,
-  randomPenaltieGeneral: (e) => {
-    console.log(e);
+  randomPenaltieGeneral: () => {
     const random = Math.floor(Math.random() * penalties.list.general.length);
     return penalties.list.general[random];
   },
-  randomPenaltieRules: (e) => {
-    console.log(e);
+  randomPenaltieRules: () => {
     const random = Math.floor(Math.random() * penalties.list.rules.length);
     return penalties.list.rules[random];
   },
