@@ -6,7 +6,7 @@ function App({ Component, pageProps, router }) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <Main router={router} tittle={Component.tittle}>
+      <Main router={router} title={Component.title}>
         <Component {...pageProps} />
       </Main>
     </ChakraProvider>

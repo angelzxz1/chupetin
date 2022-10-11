@@ -55,6 +55,6 @@ const Main = () => {
   );
 };
 
-Main.tittle = "Home";
+Main.title = "Home";
 
 export default Main;
