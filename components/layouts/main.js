@@ -1,6 +1,6 @@
 import Head from "next/head";
 import NavBar from "../navBar";
-import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 const Main = (props) => {
   const { children, router, title } = props;
   return (
