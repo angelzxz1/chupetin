@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const HowToPlay = () => {
   return (
