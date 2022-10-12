@@ -1,18 +1,11 @@
 import {
-  Box,
   Flex,
-  Heading,
   Button,
-  Grid,
-  useColorModeValue,
-  IconButton,
   useDisclosure,
   ScaleFade,
 } from "@chakra-ui/react";
 import QuestionModal from "../components/modal";
-import { CloseIcon } from "@chakra-ui/icons";
-import { useState, useEffect } from "react";
-import game from "../libs/game";
+import { useState } from "react";
 
 const Main = () => {
   const [fullH, setFullH] = useState("calc(100vh - 3.5rem)");
