@@ -2,7 +2,6 @@ import NextLink from "next/link";
 import {
   Box,
   Heading,
-  Flex,
   Text,
   Container,
   Divider,
@@ -13,7 +12,7 @@ const NotFound = () => {
   return (
     <Container mt={14}>
       <Heading as="h1">Not found</Heading>
-      <Text>The page you're looking for was not found.</Text>
+      <Text>The page you$apos;re looking for was not found.</Text>
       <Divider my={6} />
       <Box my={6} align="center">
         <NextLink href="/" passHref>
