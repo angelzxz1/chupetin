@@ -87,8 +87,12 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
           />
         </Grid>
         <Grid gridArea="boddy">
-          <Grid>{content.Body}</Grid>
-          <Grid>{content.Penaltie}</Grid>
+          <Grid justifyContent="center" alignItems="center" fontSize={30}>
+            {content.Body}
+          </Grid>
+          <Grid justifyContent="center" alignItems="center" fontSize={30}>
+            {content.Penaltie}
+          </Grid>
         </Grid>
         <Grid>
           <Button
