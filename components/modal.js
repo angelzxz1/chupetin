@@ -71,6 +71,8 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
           gridArea="banner"
           templateAreas={`"h c"`}
           templateColumns="7fr 1fr"
+          borderBottom="1px"
+          borderColor="purple.200"
         >
           <Heading mb="20px" gridArea="h">
             {content.Title}
@@ -86,13 +88,33 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
             }}
           />
         </Grid>
-        <Grid gridArea="boddy">
-          <Grid justifyContent="center" alignItems="center" fontSize={30}>
+        <Grid
+          gridArea="boddy"
+          templateAreas={`"boddy" "penaltie"`}
+          templateRows={`3fr 1fr`}
+          templateColumns={`1fr`}
+        >
+          <Flex
+            justify="space-around"
+            aligns="center"
+            fontSize={30}
+            direction="column"
+            gridArea="boddy"
+            // bg="purple.600"
+          >
             {content.Body}
-          </Grid>
-          <Grid justifyContent="center" alignItems="center" fontSize={30}>
+          </Flex>
+          <Flex
+            justify="center"
+            align="center"
+            fontSize={30}
+            direction="column"
+            gridArea="penaltie"
+            borderTop="1px"
+            borderColor="purple.200"
+          >
             {content.Penaltie}
-          </Grid>
+          </Flex>
         </Grid>
         <Grid>
           <Button
