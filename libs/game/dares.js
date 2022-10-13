@@ -1,3 +1,5 @@
+import { Grid } from "@chakra-ui/react";
+
 const dares = {
   list_t: [
     "Read out the last dirty text you sent",
@@ -71,7 +73,20 @@ export default {
   random: () => {
     const random1 = Math.floor(Math.random() * dares.list_t.length);
     const random2 = Math.floor(Math.random() * dares.list_d.length);
-    return `${dares.list_d[random1]} or ${dares.list_t[random2]}`;
+    return (
+      <>
+        <Grid justifyContent="center" alignItems="center" textAlign="center">
+          {" "}
+          {dares.list_d[random1]}
+        </Grid>
+        <Grid justifyContent="center" alignItems="center">
+          - or -
+        </Grid>
+        <Grid justifyContent="center" alignItems="center" textAlign="center">
+          {dares.list_t[random2]}
+        </Grid>
+      </>
+    );
   },
   toString: () => {
     return "Truth or Dare";

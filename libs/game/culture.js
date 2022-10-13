@@ -1,3 +1,4 @@
+import { Flex } from "@chakra-ui/react";
 const culture = {
   list: [
     "Car brands",
@@ -36,7 +37,21 @@ export default {
   culture,
   random: () => {
     const random = Math.floor(Math.random() * culture.list.length);
-    return culture.list[random];
+    return (
+      <Flex
+        border="1px"
+        borderColor="purple.200"
+        borderRadius="md"
+        p={2}
+        mb={2}
+        w="100%"
+        fontSize={26}
+        justify="center"
+        align="center"
+      >
+        {culture.list[random]}
+      </Flex>
+    );
   },
   toString: () => {
     return "Culture";

@@ -1,3 +1,5 @@
+import { Flex } from "@chakra-ui/react";
+
 const rules = {
   list: [
     "The person 5 spots after the host needs to do a gesture, created by the host or suggested by the others, before he or she talks",
@@ -16,7 +18,21 @@ export default {
   rules,
   random: () => {
     const random = Math.floor(Math.random() * rules.list.length);
-    return rules.list[random];
+    return (
+      <Flex
+        border="1px"
+        borderColor="purple.200"
+        borderRadius="md"
+        p={2}
+        mb={2}
+        w="100%"
+        fontSize={26}
+        justify="center"
+        align="center"
+      >
+        {rules.list[random]}
+      </Flex>
+    );
   },
   toString: () => {
     return "Rule";
