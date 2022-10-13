@@ -57,8 +57,10 @@ const QuestionModal = ({ onToggle, setShowModal, setFullH }) => {
       bg="rgba(0,0,0,0.3)"
     >
       <Grid
-        w="500px"
-        h="500px"
+        maxW="700px"
+        maxH="700px"
+        w="100%"
+        h="100%"
         borderRadius="10px"
         boxShadow="0 0 10px 0 rgba(0,0,0,0.2)"
         p="20px"
