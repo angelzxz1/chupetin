@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import sizes from "./sizes";
+import colors from "./colors";
 
 const theme = extendTheme({
   config: {
@@ -9,12 +10,15 @@ const theme = extendTheme({
     disableTransitionOnChange: false,
   },
   fonts: {},
-  colors: {},
+  colors,
   styles: {
-    global: {
+    global: (props) => ({
       fontFamily: "'M PLUS Rounded 1c', sans-serif",
-    },
+      body: {
+        bg: mode("LemonLime.Mint", "LemonLime.Navy")(props),
+      },
+    }),
   },
-  sizes: sizes,
+  sizes,
 });
 export default theme;
