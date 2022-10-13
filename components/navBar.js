@@ -69,7 +69,7 @@ const NavBar = (props) => {
       w="100%"
       bg={useColorModeValue("#ffffff40", "#20202380")}
       style={{ backdropFilter: "blur(10px)" }}
-      zIndex={2}
+      zIndex={20}
       {...props}
     >
       <Container
@@ -111,9 +111,6 @@ const NavBar = (props) => {
                 </NextLink>
                 <NextLink href="/howtoplay" passHref>
                   <MenuItem as={Link}>How to play</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
