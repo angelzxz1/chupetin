@@ -26,7 +26,7 @@ const dares = {
     "Post the oldest selfie on your phone on Instagram Stories",
     "Dance without music for two minutes",
     "Pole dance with an imaginary pole",
-    "Scroll through your phone book until someone says stop. You either have to call or delete that person.",
+    "Scroll through your phone book until someone says stop. Call or delete that person.",
     "Put your clothing on backwards for the rest of the evening",
     "Try and make yourself cry in front of the group",
     "Attempt the first TikTok dance on your for you page",
@@ -76,7 +76,6 @@ export default {
     return (
       <>
         <Grid justifyContent="center" alignItems="center" textAlign="center">
-          {" "}
           {dares.list_d[random1]}
         </Grid>
         <Grid justifyContent="center" alignItems="center">
