@@ -3,6 +3,7 @@ import {
   Button,
   useDisclosure,
   ScaleFade,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import QuestionModal from "../components/modal";
 import { useState } from "react";
@@ -22,6 +23,7 @@ const Main = () => {
         // bg="purple.200"
       >
         <Button
+          colorScheme={useColorModeValue("GlassTeal", "LightLime")}
           onClick={() => {
             setFullH("20");
             setTimeout(() => {
@@ -29,6 +31,7 @@ const Main = () => {
               onToggle();
             }, 500);
           }}
+          size="lg"
         >
           Start
         </Button>
