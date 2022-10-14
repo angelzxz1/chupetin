@@ -17,6 +17,15 @@ import ThemeToggleButton from "./ThemeToggleButton";
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
   const color = useColorModeValue("black", "whiteAlpha.900");
+
+  const sameAttr = {
+    content: '""',
+    position: "absolute",
+    bottom: "12%",
+    transition: "all 200ms ease",
+    bg: color,
+    h: "1px",
+  };
   const LinkStyle = {
     p: 2,
     color: color,
@@ -25,24 +34,14 @@ const LinkItem = ({ href, path, children }) => {
 
     _before: !active
       ? {
-          content: '""',
-          position: "absolute",
-          bottom: "12%",
           left: "50%",
-          h: "1px",
           w: 0,
-          transition: "all 200ms ease",
-          bg: color,
+          ...sameAttr,
         }
       : {
-          content: '""',
-          position: "absolute",
-          bottom: "12%",
           left: 0,
-          h: "1px",
           w: "100%",
-          transition: "all 200ms ease",
-          bg: color,
+          ...sameAttr,
         },
     _hover: !active
       ? {
